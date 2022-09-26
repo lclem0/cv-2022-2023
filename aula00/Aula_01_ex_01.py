@@ -23,8 +23,8 @@ if  np.shape(image) == ():
 # Image characteristics
 #height, width = image.shape
 
-print("Image Size: (%d,%d)" % (height, width))
-print("Image Type: %s" % (image.dtype))
+#print("Image Size: (%d,%d)" % (height, width))
+#print("Image Type: %s" % (image.dtype))
 
 
 # Create a vsiualization window (optional)
