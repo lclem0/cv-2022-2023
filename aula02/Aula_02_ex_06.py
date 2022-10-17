@@ -43,8 +43,8 @@ def histogram2image(hist_item, histSize, histImageWidth, histImageHeight, color)
 
 
 # Read the image from argv
-image = cv2.imread( sys.argv[1] , cv2.IMREAD_UNCHANGED );
-hist_eq = cv2.equalizeHist(image);
+image = cv2.imread( sys.argv[1] , cv2.IMREAD_UNCHANGED )
+hist_eq = cv2.equalizeHist(image)
 
 if  np.shape(image) == ():
 	# Failed Reading
@@ -66,13 +66,8 @@ if len (hist_eq.shape) > 2:
 	print ("The loaded image is NOT a GRAY-LEVEL image !")
 	exit(-1)
 
-# Display the image
-cv2.namedWindow("Original Image")
-cv2.imshow("Original Image", image)
-cv2.namedWindow("Equalized Image")
-cv2.imshow("Equalized Image", hist_eq)
-
-
+horizontal_concat = np.concatenate((image,hist_eq), axis=1)
+cv2.imshow("Horizontal plot", horizontal_concat)  # cv2.imshow('Label_window', nome_variavel_imagem)
 
 # cv2.imshow('smallest greatest',result)
 
@@ -120,6 +115,7 @@ histImage = np.flipud(histImage)
 histImage2 = np.flipud(histImage2)
 
 
-cv2.imshow('colorhist_original', histImage)
-cv2.imshow('colorhist equalized', histImage2)
+horizontal_concat2 = np.concatenate((histImage, histImage2, ), axis=1)
+cv2.imshow("Horizontal plot2", horizontal_concat2)  # cv2.imshow('Label_window', nome_variavel_imagem
+
 cv2.waitKey(0)
