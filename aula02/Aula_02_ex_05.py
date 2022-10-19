@@ -81,6 +81,6 @@ histImage2 =  histogram2image(hist_item_2, histSize, histImageWidth, histImageHe
 horizontalimages= np.concatenate((image,newimage),axis=1 )
 horizontal_histograms = np.concatenate((histImage,histImage2),axis=1 ) 
 cv2.imshow( "Images", horizontalimages)
-cv2.imshow( "Histograms", horizontal_histograms)
+cv2.imshow( "Contrast Streching", horizontal_histograms)
 cv2.waitKey(0)
 

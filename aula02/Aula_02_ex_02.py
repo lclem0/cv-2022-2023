@@ -128,4 +128,4 @@ for i in np.linspace(start=espac_hor,stop=width_r,num=cols-1):
 # 		cv2.setMouseCallback("GRAY", mouse_gray, choice)
 # 		cv2.setMouseCallback("RGB", mouse_rgb, choice)
 
-cv2.destroyAllWindows();
+cv2.destroyAllWindows()
