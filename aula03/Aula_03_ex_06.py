@@ -52,7 +52,7 @@ result = cv2.addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0)
 # image8bits = np.uint8( np.absolute(imageSobel3x3_X) )
 
 #cv2.namedWindow( "64 bits", cv2.WINDOW_AUTOSIZE )
-edges = cv2.Canny(image, 70,100)
+edges = cv2.Canny(image,220,255)
 image8bits = np.uint8( np.absolute(edges) )
 
 #teste
